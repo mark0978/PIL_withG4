@@ -1,7 +1,32 @@
 The Python Imaging Library
 $Id$
 
-Release 1.1.7 (November 15, 2009)
+Release 1.1.7 (November 15, 2009)  With the Group4 Fax (readonly) patch
+Also setup to build in virtualenv on windows OR linux.  Linux requires 
+some additional work based on this post.
+
+https://www.kuro5hin.org/story/2010/4/15/133252/616
+
+I've already applied the patch to 1.1.7 and all you need is to apt-get
+the source and copy the 3 header files to /usr/local/include
+to get it to work.
+
+Windows includes the library files for zlib, libjpeg, libtiff, and
+freetype2.  I didn't include littleCMS because I didn't need it and 
+don't really even understand what it does.
+
+I plan on pushing out the source of zlib, libjpeg and libtiff 
+settings that allow it to work on windows right after this deadline
+is behind me.
+
+Other than the Group4 Patch, I've made no changes to the PIL code.
+
+Pull this into your build folder (just like pip would) and run 
+python setup.py install
+
+If you are on windows, it should just work.  If you are linux and 
+have pulled the source for libtiff and followed the copy directions 
+in the link above it should just work too.
 
 ====================================================================
 The Python Imaging Library 1.1.7
