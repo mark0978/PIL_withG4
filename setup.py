@@ -40,10 +40,10 @@ if sys.platform == "win32":
     TIFF_ROOT = "deps"
     FREETYPE_ROOT = "deps"
 else:
-    JPEG_ROOT = None
-    ZLIB_ROOT = None
+    JPEG_ROOT = "/usr/lib/x86_64-linux-gnu"
+    ZLIB_ROOT = "/usr/lib/x86_64-linux-gnu"
     TIFF_ROOT = None
-    FREETYPE_ROOT = None
+    FREETYPE_ROOT = "/usr/lib/x86_64-linux-gnu"
 LCMS_ROOT = None
 
 # FIXME: add mechanism to explicitly *disable* the use of a library
